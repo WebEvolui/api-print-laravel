@@ -11,7 +11,7 @@
 
         window.Pusher = Pusher;
 
-        var accessToken = '4|HGxVYzzoMrAXJwIRlJOBx2C3aanKZpt4GUv2pmkMf3f3a9fb';
+        var accessToken = '5|ZEUns8eqT2XbbfkFlMSOeri9ZpmPbinHdHtAu9W3a25db4b9';
 
         axios.defaults.baseURL = 'http://api.print.test';
         axios.interceptors.request.use(function (config) {
@@ -43,8 +43,8 @@
             },
         });
 
-        Echo.private(`App.Models.User.1`)
-            .listen('MyEvent', (e) => {
+        Echo.private(`stores.1`)
+            .listen('OrderAdded', (e) => {
                 console.log(e);
             });
     </script>

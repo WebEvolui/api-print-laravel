@@ -58,7 +58,7 @@ class User extends Authenticatable
         return $this->hasOne(Customer::class);
     }
 
-    public function sttore(): HasOne
+    public function store(): HasOne
     {
         return $this->hasOne(Store::class);
     }
