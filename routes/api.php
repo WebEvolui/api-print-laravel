@@ -13,6 +13,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
 
     Route::post('/orders', [OrderController::class, 'store'])->middleware('role:customer');
+    Route::get('/orders/{id}', [OrderController::class, 'show'])->middleware('role:store');
 });
 
 Route::get('my-event', function () {
