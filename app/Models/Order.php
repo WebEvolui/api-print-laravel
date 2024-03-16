@@ -11,6 +11,8 @@ class Order extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['store_id', 'total_price'];
+
     public function store(): BelongsTo
     {
         return $this->belongsTo(Store::class);
@@ -21,7 +23,7 @@ class Order extends Model
         return $this->belongsTo(Customer::class);
     }
 
-    public function orders(): BelongsToMany
+    public function products(): BelongsToMany
     {
         return $this->belongsToMany(Product::class)->withPivot(['quantity', 'subtotal']);
     }
