@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\OrderAdded;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
@@ -48,7 +49,7 @@ class OrderController extends Controller
             )
         );
 
-        // event(new OrderAdded($order));
+        event(new OrderAdded($order));
 
         return $order;
     }

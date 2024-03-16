@@ -1,6 +1,6 @@
 <?php
 
-use App\Events\MyEvent;
+use App\Events\OrderAdded;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\OrderController;
 use Illuminate\Http\Request;
@@ -14,8 +14,4 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
     Route::post('/orders', [OrderController::class, 'store'])->middleware('role:customer');
     Route::get('/orders/{id}', [OrderController::class, 'show'])->middleware('role:store');
-});
-
-Route::get('my-event', function () {
-    event(new MyEvent('hello world'));
 });
