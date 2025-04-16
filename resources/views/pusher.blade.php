@@ -11,7 +11,7 @@
 
         window.Pusher = Pusher;
 
-        var accessToken = '5|ZEUns8eqT2XbbfkFlMSOeri9ZpmPbinHdHtAu9W3a25db4b9';
+        var accessToken = '17|vw527bYz4zCcIiugA9CwdRrsb931zWmKAWXcdVuNc2b9e3a4';
 
         axios.defaults.baseURL = 'http://api.print.test';
         axios.interceptors.request.use(function (config) {
